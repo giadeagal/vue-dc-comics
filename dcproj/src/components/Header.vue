@@ -23,7 +23,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
   display: flex;
   justify-content: space-around;
@@ -36,26 +36,25 @@ img {
 
 ul {
   list-style: none;
-}
 
-li {
+  li {
   display: inline-block;
   margin: 0 20px;
   padding: 20px 0;
-}
 
-a {
+    &:hover {
+    border-bottom: 2px solid blue;
+
+      & a {
+      color: blue;
+      }
+    }
+  }
+
+  a {
   text-decoration: none;
   color: black;
+  }
 }
 
-/* da mettere in sass */
-li:hover {
-  border-bottom: 2px solid blue;
-}
-
-/* da mettere in sass */
-li:hover a {
- color: blue;
-}
 </style>
