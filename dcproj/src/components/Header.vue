@@ -6,7 +6,7 @@
 
       <nav>
         <ul>
-          <li v-for="(item, i) in navItems " :key="i" :class="item.active? 'active' : ''"><a :href="item.url">{{item.text}}</a></li>
+          <li v-for="(item, i) in navItems " :key="i" :class="{active : item.active}"><a :href="item.url">{{item.text}}</a></li>
         </ul>
       </nav>
 
