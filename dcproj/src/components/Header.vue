@@ -6,7 +6,7 @@
 
       <nav>
         <ul>
-          <li v-for="(item, i) in navItems " :key="i"><a :href="item.url">{{item.text}}</a></li>
+          <li v-for="(item, i) in navItems " :key="i" :class="item.active? 'active' : ''"><a :href="item.url">{{item.text}}</a></li>
         </ul>
       </nav>
 
@@ -22,43 +22,53 @@ export default {
       navItems: [
         {
           text:"characters",
-          url:"#"
+          url:"#",
+          active: false
         },
         {
           text:"comics",
-          url:"#"
+          url:"#",
+          active: true
         },
         {
           text:"movies",
-          url:"#"
+          url:"#",
+          active: false
         },
         {
           text:"tv",
-          url:"#"
+          url:"#",
+          active: false
         },
         {
           text:"games",
-          url:"#"
+          url:"#",
+          active: false
         },
         {
           text:"collectibles",
-          url:"#"
+          url:"#",
+          active: false
         },
         {
           text:"videos",
-          url:"#"
+          url:"#",
+          active: false
         },
         {
           text:"fans",
-          url:"#"
+          url:"#",
+          active: false
         },
         {
           text:"news",
-          url:"#"
+          url:"#",
+          active: false
         },
         {
           text:"shop",
-          url:"#"
+          url:"#",
+          active: false
         }
       ]
     }
@@ -89,7 +99,8 @@ ul {
   margin: 0 20px;
   padding: 20px 0;
 
-    &:hover {
+    &:hover,
+    &.active {
     border-bottom: 2px solid $dcblue;
 
       & a {
@@ -102,6 +113,7 @@ ul {
   text-decoration: none;
   color: black;
   }
+
 }
 
 </style>
