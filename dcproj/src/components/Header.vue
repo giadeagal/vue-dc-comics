@@ -24,6 +24,7 @@ export default {
 
 
 <style lang="scss" scoped>
+@import "../style/vars.scss";
 .container {
   display: flex;
   justify-content: space-around;
@@ -36,6 +37,7 @@ img {
 
 ul {
   list-style: none;
+  font-weight: 700;
 
   li {
   display: inline-block;
@@ -43,10 +45,10 @@ ul {
   padding: 20px 0;
 
     &:hover {
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid $dcblue;
 
       & a {
-      color: blue;
+      color: $dcblue;
       }
     }
   }
