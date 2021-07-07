@@ -48,7 +48,7 @@ export default {
 @import "../style/vars.scss";
 .container {
     width: 100%;
-    height: 120px;
+    height: 100px;
     background-color: $dcblue;
 
     .flexer {
@@ -66,7 +66,7 @@ export default {
 
     &:hover {
         cursor:pointer;
-        transform: scale(1.2);
+        transform: scale(1.05);
         transition: 200ms;
     }
 
@@ -74,7 +74,8 @@ export default {
         color:white;
         position: relative;
         left: 60px;
-        top: 40px
+        top: 40px;
+        text-transform: uppercase;
     }
 
     img {
