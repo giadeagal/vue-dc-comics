@@ -11,10 +11,17 @@
       </nav>
 
     </div>
+
+    <div class="jumbo">
+        <img src="@/assets/img/jumbotron.jpg" alt="">
+    </div>
+
+    
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'Header',
   data() {
@@ -83,10 +90,13 @@ export default {
   display: flex;
   justify-content: space-around;
   height: 80px;
+  position:relative;
 }
 
-img {
+a {
+  img {
   max-height: 100%;
+  }
 }
 
 ul {
@@ -113,7 +123,28 @@ ul {
   text-decoration: none;
   color: black;
   }
+}
 
+.jumbo{
+  width: 100%;
+  max-height: 350px;
+  overflow: hidden;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.current {
+  display: inline-block;
+  background-color: $dcblue;
+  padding:10px;
+  color:#fff;
+  text-transform: uppercase;
+  border-radius: 4px;
+  position:absolute;
+  top: 50%;
+  left: 5rem;
 }
 
 </style>
