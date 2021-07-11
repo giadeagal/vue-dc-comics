@@ -2,7 +2,8 @@
   <div>
       <div class="container">
         <div class="left">
-          <ul>
+          <div class="left-one">
+            <ul>
             <li>
               <h3>{{list1.title}}</h3>
             </li>
@@ -10,7 +11,7 @@
               <a :href="list1.url">{{e}}</a>
             </li>
           </ul>
-          <ul class="stay">
+          <ul>
             <li>
               <h3>{{list2.title}}</h3>
             </li>
@@ -18,7 +19,9 @@
               <a :href="list2.url">{{e}}</a>
             </li>
           </ul>
-          <ul>
+          </div>
+          <div class="left-two">
+            <ul>
             <li>
               <h3>{{list3.title}}</h3>
             </li>
@@ -26,7 +29,9 @@
               <a :href="list3.url">{{e}}</a>
             </li>
           </ul>
-          <ul>
+          </div>
+          <div class="left-three">
+            <ul>
             <li>
               <h3>{{list4.title}}</h3>
             </li>
@@ -34,6 +39,7 @@
               <a :href="list4.url">{{e}}</a>
             </li>
           </ul>
+          </div>
         </div>
         <div class="right">
           <img src="./../assets/img/dc-logo-bg.png" alt="">
@@ -91,35 +97,41 @@ export default {
 }
 
 .left {
-position: relative;
+  position: relative;
+  font-size: .8rem;
 
-ul {
-  list-style: none;
-  float: left;
-  padding-right: 50px;
+  [class^="left-"] {
+    width: calc(100% / 4);
+    float: left;
 
-  a {
-    color: grey;
-    text-decoration: none;
-    text-transform: capitalize;
+    ul {
+      list-style: none;
+      float: left;
+      padding-right: 50px;
 
-    &:hover {
-      color: #fff;
+      li {
+        margin: 2px 0;
+
+        a {
+          color: grey;
+          text-decoration: none;
+          text-transform: capitalize;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
     }
-  }
-
   h3 {
     color: white;
     padding: 10px 0;
     text-transform: uppercase;
   }
-}
-}
+  }
 
-ul.stay {
-  float: none;
-  position: absolute;
-  bottom: 5%;
+
+
 }
 
 .right {

@@ -97,6 +97,10 @@ export default {
     position: relative;
     bottom: 10px;
 
+    &:hover img {
+      filter: brightness(2);
+    }
+
     &:not(:last-child) {
       margin-right: 10px;
     }
